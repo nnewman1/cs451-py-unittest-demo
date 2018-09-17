@@ -1,4 +1,5 @@
 # baby_set.py
+# Nicholas Newman
 
 class BabySet:
 	"""A class the mimics the behavior of python's built in 
@@ -23,6 +24,10 @@ class BabySet:
 	def add(self, elem):
 		"""Add element elem to the set only if it is 
 		unique to the set."""
+
+		for i in self.__data:
+			if i == elem:
+				return None
 
 		self.__data.append(elem)
 

@@ -1,4 +1,5 @@
 # test_babyset.py
+# Nicholas Newman
 import unittest
 
 from baby_set import BabySet
@@ -33,10 +34,15 @@ class TestBabySetMethods(unittest.TestCase):
             bset.get(3)
 
     def test_remove(self):
-        pass
+        bset = BabySet([2,4,4])
+        bset.remove(2)
+        self.assertEqual(bset.size(), 1)
 
     def test_clear(self):
-        pass
+        bset = BabySet([2,4,4])
+        bset.clear()
+        self.assertEqual(bset.size(), 0)
+
 
 if __name__ == '__main__':
     unittest.main()
